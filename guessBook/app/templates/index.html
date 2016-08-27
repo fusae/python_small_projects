@@ -1,0 +1,45 @@
+<html>
+<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+
+<head>
+    <title>Guess book</title>
+</head>
+<body>
+<h2>Leave Your Message</h2>
+
+{% for message in form.name.errors %}
+<!--    <div style="background-color: #FBB0B0; text-align: center;">{{ message }}</div> -->
+    <div class="flash">{{ message }}</div>
+{% endfor %}
+
+{% for message in form.message.errors %}
+    <div class="flash">{{ message }}</div>
+{% endfor %}
+
+    <form action="{{ url_for('index') }}" method=post>
+        {{ form.hidden_tag() }}
+        
+        {{ form.name.label }}
+        {{ form.name }}
+        
+        {{ form.message.label }}
+        {{ form.message }}
+        <div class="buttonHolder">       
+            {{ form.submit }}
+        </div>
+    </form>
+
+        <h1>Message Board</h1>
+    <ul>
+        {% for msg in msglist %}
+
+        <div class="msglist">{{ msg['name'] }} leaf a message at {{ msg['time'] }}</div>
+
+        <div class="msglist">{{ msg['message'] }}</div>
+        
+
+        {% endfor %}
+
+    </ul>
+</body>
+</html>
