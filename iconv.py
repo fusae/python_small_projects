@@ -26,7 +26,7 @@ def traverse(path):
             iconv(name)
 
 if __name__ == '__main__':
-    path = 'HTML与CSS'
+    path = 'THE-DIRECTORY'
 
     traverse(path)
 
