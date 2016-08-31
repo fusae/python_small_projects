@@ -5,4 +5,4 @@
 ### use flask and mongo to develop this small guess book website.
 
 ## 3.iconv.py
-### traverse the whole directory to find "*.txt" and convet it from cp936 to utf-8
+### traverse the whole directory to find "*.txt" and convert it from cp936 to utf-8
